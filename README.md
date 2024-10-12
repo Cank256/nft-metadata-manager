@@ -12,6 +12,33 @@ With this tool, users can:
 - Preview how the NFT will look with the provided data.
 - Obtain a direct link to the JSON metadata hosted on IPFS.
 
+## Features
+
+- **File Upload**: Upload images for NFTs securely to IPFS via the Pinata API.
+- **Metadata Generation**: Create JSON metadata for NFTs, including properties like name, description, and image URLs.
+- **Preview**: Visualize the NFT metadata and images before finalizing.
+- **User Authentication**: Allow users to create accounts and manage their uploads using Supabase.
+- **Database Integration**: Store user data, file references, and generated metadata in MongoDB.
+- **Easy Deployment**: Frontend is deployed using Vercel for fast and scalable performance.
+
+## Usage
+
+1. **User Registration/Login**:
+   - Register an account using your email and password.
+   - Login to access the file upload and metadata generation features.
+
+2. **Upload Image**:
+   - Navigate to the upload page and select an image file.
+   - Add a description and other properties for the NFT.
+
+3. **Generate Metadata**:
+   - The metadata will be automatically generated in JSON format.
+   - The JSON file will be stored on IPFS using Pinata.
+
+4. **Preview and Share**:
+   - Preview how the NFT will look with the uploaded data.
+   - Copy the IPFS link to share or use the JSON metadata for minting NFTs.
+
 ## Contributing
 
 We welcome contributions! Please read the [contributing guidelines](CONTRIBUTING.md) for more details.
