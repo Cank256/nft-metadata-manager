@@ -1,36 +1,42 @@
 "use client";
 
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import { ReactNode } from "react";
+import { AuthProvider, useAuth } from "../context/AuthContext";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Inter } from "next/font/google";
 import "../styles/index.css";
+
+import AuthenticatedLayout from "@/components/Layouts/AuthenticatedLayout";
+import UnauthenticatedLayout from "@/components/Layouts/UnauthenticatedLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
 }: {
-  readonly children: React.ReactNode;
+  readonly children: ReactNode;
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head />
-
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
-        <Providers>
-          <Header />
-          {children}
-          <Footer />
+        {/* Wrap the entire application in AuthProvider */}
+        <AuthProvider>
+          <AuthWrapper>{children}</AuthWrapper>
           <ScrollToTop />
-        </Providers>
+        </AuthProvider>
       </body>
     </html>
   );
 }
 
-import { Providers } from "./providers";
+// This component handles the conditional rendering based on authentication state
+function AuthWrapper({ children }: { children: ReactNode }) {
+  const { isAuthenticated } = useAuth();
+
+  return isAuthenticated ? (
+    <AuthenticatedLayout>{children}</AuthenticatedLayout>
+  ) : (
+    <UnauthenticatedLayout>{children}</UnauthenticatedLayout>
+  );
+}
