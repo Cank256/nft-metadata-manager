@@ -21,6 +21,74 @@ With this tool, users can:
 - **Database Integration**: Store user data, file references, and generated metadata in MongoDB.
 - **Easy Deployment**: Frontend is deployed using Vercel for fast and scalable performance.
 
+## Technologies Used
+
+- **Frontend**: [Next.js](https://nextjs.org/), [shadcn/ui](https://shadcn.dev/)
+- **Backend**: [Node.js](https://nodejs.org/) with [Express.js](https://expressjs.com/)
+- **File Storage**: [Pinata API](https://pinata.cloud/) for storing images and metadata on IPFS
+- **Database**: [MongoDB](https://www.mongodb.com/)
+- **Authentication**: [Supabase](https://supabase.com/) or JWT-based auth for user management
+- **Deployment**: [Vercel](https://vercel.com/) for frontend, backend can be hosted on [Heroku](https://heroku.com/) or [Railway](https://railway.app/)
+
+## Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+- Node.js (v20+)
+- NEXT.js (v14+)
+- MongoDB instance (local or cloud, e.g., [MongoDB Atlas](https://www.mongodb.com/cloud/atlas))
+- Supabase project for authentication or Firebase
+- Pinata account with API Key and Secret
+- Vercel (or Netlify or Docker) for frontend deployment
+- Heroku (or Railway or Docker) for backend deployment
+- Shadcn/ui library for building user interfaces
+
+### Installation
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Cank256/nft-metadata-manager.git
+   cd nft-metadata-manager
+   ```
+
+2. **Install Frontend Dependencies**:
+   ```bash
+   cd frontend
+   npm install
+   ```
+
+3. **Install Backend Dependencies**:
+   ```bash
+   cd ../backend
+   npm install
+   ```
+
+4. **Environment Variables**:
+   Create a `.env` file in the `backend` directory with the following content:
+   ```env
+   PORT=5000
+   MONGO_URI=your_mongo_connection_string
+   PINATA_API_KEY=your_pinata_api_key
+   PINATA_API_SECRET=your_pinata_api_secret
+   SUPABASE_URL=your_supabase_url
+   SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
+
+5. **Start the Development Server**:
+   - **Frontend**: In the `frontend` directory:
+     ```bash
+     npm run dev
+     ```
+   - **Backend**: In the `backend` directory:
+     ```bash
+     npm run start
+     ```
+
+6. **Access the Application**:
+   Open your browser and navigate to `http://localhost:3000` to view the app.
+
 ## Usage
 
 1. **User Registration/Login**:
