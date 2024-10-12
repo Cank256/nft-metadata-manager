@@ -37,8 +37,8 @@ const Footer = () => {
                     className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     <svg
-                      width="18"
-                      height="18"
+                      width="26"
+                      height="26"
                       viewBox="0 0 22 22"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -57,8 +57,8 @@ const Footer = () => {
                     className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     <svg
-                      width="18"
-                      height="18"
+                      width="26"
+                      height="26"
                       viewBox="0 0 22 22"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -79,8 +79,8 @@ const Footer = () => {
                     className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     <svg
-                      width="18"
-                      height="14"
+                      width="26"
+                      height="26"
                       viewBox="0 0 18 14"
                       className="fill-current"
                     >
@@ -95,8 +95,8 @@ const Footer = () => {
                     className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     <svg
-                      width="17"
-                      height="16"
+                      width="26"
+                      height="22"
                       viewBox="0 0 17 16"
                       className="fill-current"
                     >
