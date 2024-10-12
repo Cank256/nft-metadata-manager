@@ -66,14 +66,19 @@ Follow these instructions to get a copy of the project up and running on your lo
    ```
 
 4. **Environment Variables**:
+   Create a `.env` file in the `frontend` directory with the following content:
+   ```env
+   PORT=3000
+   SUPABASE_URL=your_supabase_url
+   SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
+
    Create a `.env` file in the `backend` directory with the following content:
    ```env
    PORT=5000
    MONGO_URI=your_mongo_connection_string
    PINATA_API_KEY=your_pinata_api_key
    PINATA_API_SECRET=your_pinata_api_secret
-   SUPABASE_URL=your_supabase_url
-   SUPABASE_ANON_KEY=your_supabase_anon_key
    ```
 
 5. **Start the Development Server**:
