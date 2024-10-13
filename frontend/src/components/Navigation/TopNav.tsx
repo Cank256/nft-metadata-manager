@@ -23,11 +23,21 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 import ThemeToggler from "@/components/Header/ThemeToggler";
+import { useAuth } from "@/context/AuthContext";
+import { useRouter } from "next/navigation";
 
 export const description =
   "A products dashboard with a sidebar navigation and a main content area. The dashboard has a header with a search input and a user menu. The sidebar has a logo, navigation links, and a card with a call to action. The main content area shows an empty state with a call to action."
 
 export default function TopNav() {
+  const { logout } = useAuth();
+  const router = useRouter();
+
+  const handleLogout = () => {
+    logout(); // Call the logout function to update the auth state
+    router.push("/signin"); // Redirect to the sign-in page after logging out
+  };
+
   return (
     <header className="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6">
           <Sheet>
@@ -106,7 +116,7 @@ export default function TopNav() {
               <DropdownMenuItem>Profile</DropdownMenuItem>
               <DropdownMenuItem>Support</DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Logout</DropdownMenuItem>
+              <DropdownMenuItem onClick={handleLogout}>Logout</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
     </header>

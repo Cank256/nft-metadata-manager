@@ -1,11 +1,13 @@
-const Dashboard = () => {
-    return (
-        <section id="features" className="py-16 md:py-20 lg:py-28">
-            <div>
-                <h1>Dashboard</h1>
-            </div>
-        </section>
-    )
-}
+// src/app/dashboard/page.tsx
+import ProtectedRoute from "@/components/ProtectedRoute";
 
-export default Dashboard;
+export default function DashboardPage() {
+  return (
+    <ProtectedRoute>
+      <div>
+        <h1>Dashboard</h1>
+        {/* Dashboard content goes here */}
+      </div>
+    </ProtectedRoute>
+  );
+}
